@@ -5,14 +5,14 @@ from harness_services import HarnessServices
 
 class HarnessBaseService:
     def __init__(self, api_key, account_identifier):
-        self.session = requests.Session()
-        self.session.   headers.update({
+        self._session = requests.Session()
+        self._session.   headers.update({
             'x-api-key': api_key,
             'Harness-Account': account_identifier,
             'Content-Type': 'application/json'
         })
         self._account_identifier = account_identifier
-        self.base_url = "https://app.harness.io"
+        self._base_url = "https://app.harness.io"
         self._pipelines = None  # Placeholder for the Pipelines class
         self._connectors = None  # Placeholder for the Connectors class
         self._services = None  # Placeholder for the Services class
@@ -36,15 +36,15 @@ class HarnessBaseService:
         return self._connectors
 
     def _make_request(self, method, endpoint, **kwargs):
-        url = f"{self.base_url}{endpoint}"
-        response = self.session.request(method, url, **kwargs)
+        url = f"{self._base_url}{endpoint}"
+        response = self._session.request(method, url, **kwargs)
         if response.ok:
             return response.json()
         print(response.text)
         response.raise_for_status()
     
     # Build the url dynamically for the new beta API
-    def construct_url(self, entity, identifier=None, org_identifier=None, project_identifier=None):
+    def _construct_url(self, entity, identifier=None, org_identifier=None, project_identifier=None):
         parts = ["/v1"]
 
         if org_identifier:
