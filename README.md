@@ -34,4 +34,14 @@ harness_service.connectors.old.fetch_connectors_listV2(
     org_identifier=org_identifier,
     project_identifier=project_identifier
 )
-```# harness-py-sdk
+```
+
+## Reference
+
+| Class          | Documentation URL                                                                                       |
+|----------------|----------------------------------------------------------------------------------------------------------|
+| Connectors     | [Link](https://guilhermezanini-harness.github.io/harness-py-sdk/harness_py_sdk/harness_connectors.html)                   |
+| Old Connectors | [Link](https://guilhermezanini-harness.github.io/harness-py-sdk/harness_py_sdk/harness_old_connectors.html)               |
+| Pipelines      | [Link](https://guilhermezanini-harness.github.io/harness-py-sdk/harness_py_sdk/harness_pipelines.html)                     |
+| Services       | [Link](https://guilhermezanini-harness.github.io/harness-py-sdk/harness_py_sdk/harness_services.html)                     |
+| Templates      | [Link](https://guilhermezanini-harness.github.io/harness-py-sdk/harness_py_sdk/harness_templates.html)                     |
