@@ -1,5 +1,5 @@
 
-from harness_old_connectors import HarnessOldConnectors
+from .harness_old_connectors import *
 
 class HarnessConnectors():
     def __init__(self, harness_service):
@@ -9,7 +9,7 @@ class HarnessConnectors():
     @property
     def old(self):
         if self._old is None:
-            self._old = HarnessOldConnectors(self._harness_service)  # Initialize with self to pass the session
+            self._old = HarnessOldConnectors(self.harness_service)  # Initialize with self to pass the session
         return self._old
     
     def fetch_connector(self, identifier, org_identifier=None, project_identifier=None):
@@ -19,13 +19,13 @@ class HarnessConnectors():
             org_identifier (str): Organization identifier
             project_identifier (str): Project identifier
         """
-        endpoint = self._harness_service._construct_url("connectors", identifier, org_identifier, project_identifier)
-        return self._harness_service._make_request("GET", endpoint)
+        endpoint = self.harness_service._construct_url("connectors", identifier, org_identifier, project_identifier)
+        return self.harness_service._make_request("GET", endpoint)
     
     def fetch_connectors(self, org_identifier=None, project_identifier=None):
-        endpoint = self._harness_service._construct_url("connectors", None, org_identifier, project_identifier)
-        return self._harness_service._make_request("GET", endpoint)
+        endpoint = self.harness_service._construct_url("connectors", None, org_identifier, project_identifier)
+        return self.harness_service._make_request("GET", endpoint)
     
     def update_connector(self, identifier, data, org_identifier=None, project_identifier=None):
-        endpoint = self._harness_service._construct_url("connectors", identifier, org_identifier, project_identifier)
-        return self._harness_service._make_request("PUT", endpoint, json=data)
+        endpoint = self.harness_service._construct_url("connectors", identifier, org_identifier, project_identifier)
+        return self.harness_service._make_request("PUT", endpoint, json=data)

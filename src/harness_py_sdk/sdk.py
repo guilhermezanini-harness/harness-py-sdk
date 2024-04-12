@@ -1,9 +1,10 @@
 import requests
-from harness_pipelines import HarnessPipelines
-from harness_connectors import HarnessConnectors
-from harness_services import HarnessServices
 
-class HarnessBaseService:
+from .harness_pipelines import *
+from .harness_connectors import *
+from .harness_services import *
+
+class HarnessService:
     def __init__(self, api_key, account_identifier):
         self._session = requests.Session()
         self._session.   headers.update({

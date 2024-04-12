@@ -1,6 +1,7 @@
-import harness_base_service
-import harness_connectors
-import harness_old_connectors
-import harness_pipelines
-import harness_services
-import harness_templates
+from .sdk import *
+from .harness_connectors import *
+from .harness_old_connectors import *
+from .harness_pipelines import *
+from .harness_services import *
+from .harness_templates import *
+__all__=['HarnessService']

@@ -25,9 +25,9 @@ To get started with the SDK, you'll need to authenticate with the Harness API. H
 
 ```python
 import os
-from harness_sdk import HarnessBaseService
+from harness_py_sdk import sdk
 
-harness_service = HarnessBaseService(os.environ.get('HARNESS_PLATFORM_API_KEY'), "my-account-identifier")
+harness_service = sdk.HarnessService(os.environ.get('HARNESS_PLATFORM_API_KEY'), "my-account-identifier")
 ```
 
 ### Example 1 - Listing Services

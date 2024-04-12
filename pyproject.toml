@@ -1,6 +1,6 @@
 [project]
 name = "harness-py-sdk"
-version = "0.0.2"
+version = "0.0.10"
 authors = [
   { name="Guilherme Zanini", email="guilherme.zanini@harness.io" },
 ]
