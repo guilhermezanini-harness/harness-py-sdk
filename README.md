@@ -10,14 +10,11 @@ Before using the SDK, ensure you have the following:
 - **Python 3 or higher**: This SDK requires Python 3 or higher to run.
 - **Account Identifier**: The account identifier is required for authenticating with the Harness API. You can find this identifier in the URL when you're logged into your Harness account. For example, in the URL `https://app.harness.io/ng/account/Fak3Acc0unt1D/settings/overview`, the account identifier is `Fak3Acc0unt1D`.
 
-Make sure you have installed the required libraries using the following commands:
+Install the SDK using the following command:
 
 ```bash
-pip install requests pyyaml
+pip install harness-py-sdk
 ```
-
-- `requests`: This library is required for making HTTP requests to the Harness platform.
-- `pyyaml`: This library is necessary for handling YAML files, which may be required by the script for configuration or data manipulation.
 
 ## Getting Started
 
