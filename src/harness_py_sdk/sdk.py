@@ -1,9 +1,9 @@
 import requests
 
-from harness_pipelines import HarnessPipelines
-from harness_connectors import HarnessConnectors
-from harness_services import HarnessServices
-from harness_templates import HarnessTemplates
+from .harness_pipelines import HarnessPipelines
+from .harness_connectors import HarnessConnectors
+from .harness_services import HarnessServices
+from .harness_templates import HarnessTemplates
 
 class HarnessService:
     def __init__(self, api_key, account_identifier):
