@@ -1,5 +1,5 @@
 
-from .harness_old_connectors import *
+from harness_old_connectors import HarnessOldConnectors
 
 class HarnessConnectors():
     def __init__(self, harness_service):
